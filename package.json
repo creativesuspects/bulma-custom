@@ -1,0 +1,37 @@
+{
+  "bundleDependencies": false,
+  "deprecated": false,
+  "name": "bulma-prefixed",
+  "description": "A simple NPM builder for bulma.css with a custom class namespace",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "bulma": "^0.8.2",
+    "bulma-checkradio": "^1.1.1",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.13.1",
+    "postcss": "^7.0.30",
+    "postcss-cli": "^7.1.1",
+    "postcss-prefixer": "^2.1.2",
+    "rimraf": "^3.0.2"
+  },
+  "scripts": {
+    "build": "npm run build-all && npm run build-custom",
+    "build-all": "npm run all-clean && npm run all-sass && npm run all-autoprefix && npm run all-cleancss && npm run all-prefix && npm run all-prefix-cleancss && npm run all-prefix-sourcemap",
+    "build-custom": "npm run custom-clean && npm run custom-sass && npm run custom-autoprefix && npm run custom-cleancss && npm run custom-prefix && npm run custom-prefix-cleancss && npm run custom-prefix-sourcemap",
+    "all-clean": "rimraf all",
+    "all-sass": "node-sass --output-style expanded --source-map true bulma.sass all/bulma.css",
+    "all-autoprefix": "postcss --use autoprefixer --map false --output all/bulma.css all/bulma.css --verbose",
+    "all-cleancss": "cleancss -o all/bulma.min.css all/bulma.css",
+    "all-prefix": "postcss --no-map --output all/bulma.prefixed.css all/bulma.css --verbose",
+    "all-prefix-cleancss": "cleancss -o all/bulma.prefixed.min.css all/bulma.prefixed.css",
+    "all-prefix-sourcemap": "postcss --use autoprefixer --map true --output all/bulma.prefixed.css all/bulma.prefixed.css --verbose",
+    "custom-clean": "rimraf custom",
+    "custom-sass": "node-sass --output-style expanded --source-map true bulma-custom.sass custom/bulma.custom.css",
+    "custom-autoprefix": "postcss --use autoprefixer --map false --output custom/bulma.custom.css custom/bulma.custom.css --verbose",
+    "custom-cleancss": "cleancss -o custom/bulma.custom.min.css custom/bulma.custom.css",
+    "custom-prefix": "postcss --no-map --output custom/bulma.custom.prefixed.css custom/bulma.custom.css --verbose",
+    "custom-prefix-cleancss": "cleancss -o custom/bulma.custom.prefixed.min.css custom/bulma.custom.prefixed.css",
+    "custom-prefix-sourcemap": "postcss --use autoprefixer --map true --output custom/bulma.custom.prefixed.css custom/bulma.custom.prefixed.css --verbose"
+  }
+}

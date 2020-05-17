@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello (prefixed) Bulma!</title>
+    <link rel="stylesheet" href="custom/bulma.custom.prefixed.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <style>
+        .bd-notification {
+            background-color: #00d1b2;
+            border-radius: 4px;
+            color: #fff;
+            font-weight: 600;
+            padding: 1.25rem 0;
+            position: relative;
+            text-align: center;
+        }
+    </style>
+  </head>
+  <body>
+  <section class="bu-section">
+    <div class="bu-container">
+      <h1 class="bu-title">
+        Hello World
+      </h1>
+      <p class="bu-subtitle">
+        My first website with (prefixed) <strong>Bulma</strong>!
+      </p>
+    </div>
+  </section>
+  <section class="bu-section">
+    <div class="bu-container">
+        <div class="bu-columns bu-is-multiline">
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">First column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">Second column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">Third column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">Fourth column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">First column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">Second column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">Third column</p>
+          </div>
+          <div class="bu-column bu-is-one-quarter">
+            <p class="bd-notification bu-is-primary">Fourth column</p>
+          </div>
+        </div>
+    </div>
+  </section>
+  <section class="bu-section">
+    <div class=bu-container>
+      <div class="bu-field">
+        <label class="bu-label">Subject</label>
+        <div class="bu-control">
+          <div class="bu-select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      
+      <div class="bu-field">
+        <label class="bu-label">Radio buttons</label>
+        <div class="bu-control">
+          <label class="bu-radio">
+            <input type="radio" name="question">
+            Yes
+          </label>
+          <label class="bu-radio">
+            <input type="radio" name="question">
+            No
+          </label>
+        </div>
+      </div>
+      
+      <label class="bu-label">Radio buttons (extension)</label>
+      <div class="bu-field">
+        <input class="bu-is-checkradio" id="exampleRtlRadioInline1" type="radio" name="exampleRtlRadioInline" checked="checked">
+        <label for="exampleRtlRadioInline1">Option 1</label>
+        <input class="bu-is-checkradio" id="exampleRtlRadioInline2" type="radio" name="exampleRtlRadioInline">
+        <label for="exampleRtlRadioInline2">Option 2</label>
+      </div>
+
+      <label class="bu-label">Checkboxes (extension)</label>
+      <div class="bu-field">
+        <input class="bu-is-checkradio" id="exampleCheckboxDefault" type="checkbox" name="exampleCheckboxDefault" checked="checked">
+        <label for="exampleCheckboxDefault">Checkbox</label>
+      </div>
+
+      <div class="bu-field">
+        <input class="bu-is-checkradio bu-is-success" id="exampleCheckboxSuccess" type="checkbox" name="exampleCheckboxSuccess" checked="checked">
+        <label for="exampleCheckboxSuccess">Checkbox - success</label>
+      </div>
+
+      <div class="bu-field">
+        <input class="bu-is-checkradio bu-is-warning" id="exampleCheckboxWarning" type="checkbox" name="exampleCheckboxWarning" checked="checked">
+        <label for="exampleCheckboxWarning">Checkbox - warning</label>
+      </div>
+
+      <div class="bu-field">
+        <input class="bu-is-checkradio bu-is-danger" id="exampleCheckboxDanger" type="checkbox" name="exampleCheckboxDanger" checked="checked">
+        <label for="exampleCheckboxDanger">Checkbox - danger</label>
+      </div>
+
+      <div class="bu-field">
+        <input class="bu-is-checkradio bu-is-info" id="exampleCheckboxInfo" type="checkbox" name="exampleCheckboxInfo" checked="checked">
+        <label for="exampleCheckboxInfo">Checkbox - info</label>
+      </div>
+    </div>
+  </section>
+  </body>
+</html>
