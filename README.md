@@ -14,7 +14,7 @@ Configure your preferred class namespace in **postcss.config.js**.
 npm install
 ```
 
-#### Build Bulma with all elements, components, etc.
+#### Build default Bulma with all elements, components, etc.
 
 ```
 npm run build-all
@@ -28,3 +28,8 @@ Update **bulma-custom.sass** to include only the components you need.
 npm run build-custom
 ```
 
+#### Build both default and custom Bulma
+
+```
+npm run build
+```
