@@ -1,7 +1,7 @@
 {
   "bundleDependencies": false,
   "deprecated": false,
-  "name": "bulma-prefixed",
+  "name": "bulma-builder",
   "description": "A simple NPM builder for bulma.css with a custom class namespace",
   "dependencies": {},
   "devDependencies": {
@@ -20,7 +20,7 @@
     "build-all": "npm run all-clean && npm run all-sass && npm run all-autoprefix && npm run all-cleancss && npm run all-prefix && npm run all-prefix-cleancss && npm run all-prefix-sourcemap",
     "build-custom": "npm run custom-clean && npm run custom-sass && npm run custom-autoprefix && npm run custom-cleancss && npm run custom-prefix && npm run custom-prefix-cleancss && npm run custom-prefix-sourcemap",
     "all-clean": "rimraf all",
-    "all-sass": "node-sass --output-style expanded --source-map true bulma.sass all/bulma.css",
+    "all-sass": "node-sass --output-style expanded --source-map true node_modules/bulma/bulma.sass all/bulma.css",
     "all-autoprefix": "postcss --use autoprefixer --map false --output all/bulma.css all/bulma.css --verbose",
     "all-cleancss": "cleancss -o all/bulma.min.css all/bulma.css",
     "all-prefix": "postcss --no-map --output all/bulma.prefixed.css all/bulma.css --verbose",
